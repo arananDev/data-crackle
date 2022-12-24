@@ -34,7 +34,6 @@ import {
           minH={'60px'}
           py={{ base: 2 }}
           px={{ base: 4 }}
-          borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
           align={'center'}>
@@ -55,7 +54,7 @@ import {
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
-              color={'#fff'}>
+              color={'#e85d5d'}>
               Data Crackle
             </Text>
   
@@ -74,7 +73,7 @@ import {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'#d60606'}
+              bg={'#e85d5d'}
               href={'#'}
               _hover={{
                 bg: 'pink.300',
