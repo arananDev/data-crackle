@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight} from './HeroSectionElements'
 import Video from '../../video/video.mp4'
+import { Button } from '@chakra-ui/react'
 
 function HeroSection() {
 
@@ -21,7 +22,7 @@ function HeroSection() {
             </HeroP>
             <HeroBtnWrapper>
                 <Button to= {'contactus'} onMouseEnter = {onHover} onMouseLeave = {onHover} >
-                    Get started {hover ? <ArrowForward /> : <ArrowRight />}
+                    Get started {hover ? <ArrowRight /> : <ArrowForward />}
                 </Button>
             </HeroBtnWrapper>
         </HeroContent>
