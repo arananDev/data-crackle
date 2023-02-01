@@ -1,9 +1,10 @@
 import React from 'react'
 import { Container, Box, chakra, Text, Icon, SimpleGrid, Button, Center} from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
-import { MdOutlinePersonPin, MdPermDeviceInformation, MdOutlineFlashlightOn } from 'react-icons/md';
+import { MdWebAsset, MdOutlineMobileFriendly, MdModelTraining, MdAccessibilityNew } from 'react-icons/md';
 import { SiMinds } from 'react-icons/si';
 import { IconType } from 'react-icons';
+import { useNavigate } from 'react-router-dom';
 
 interface IFeature {
   heading: string;
@@ -13,26 +14,26 @@ interface IFeature {
 
 const features: IFeature[] = [
   {
-    heading: 'Learn with flashcards',
+    heading: 'Web Applications',
     content:
-      'The main part of the learning process is using flashcards, you see a question, then you answer it.',
-    icon: MdOutlineFlashlightOn
+      'Need a website built with a simple UI for your users and technical processes under the hood? We can build both these components',
+    icon: MdWebAsset
   },
   {
-    heading: 'Never forget',
-    content: `With our latest SRS algorithm, you will never forget what you've learned. The more you remember something, the less often the system will ask you to review it.`,
-    icon: SiMinds
+    heading: 'Mobile Apps',
+    content: `With our tech stack we can build Mobile Applications which run on IOS, Android, and even online!`,
+    icon: MdOutlineMobileFriendly
   },
   {
-    heading: 'Tiny bits of information',
+    heading: 'Machine Learning',
     content:
-      'Instead of showing you a wall of text that will take you a long time to read and then that you quickly forget, we show you tiny bits of information every day.',
-    icon: MdPermDeviceInformation
+      'Want to use Machine Learning and AI to automate your business but do not know how? Have a talk with us and let us see if we can help',
+    icon: MdModelTraining
   },
   {
-    heading: 'Community',
-    content: `Keep your learning streak going, see stats of what you've learned and share it with others via your public profile. You can also join our private discord server!`,
-    icon: MdOutlinePersonPin
+    heading: 'Customer Support',
+    content: `Even after the project is finished, we are always available to help debug any issues you're still having and help you out if you're confused about any aspect of the product`,
+    icon: MdAccessibilityNew
   }
 ];
 
@@ -40,10 +41,12 @@ const features: IFeature[] = [
 
 
 function ServicesSection() {
+  const navigate = useNavigate()
+
     return (
-        <Container maxW="6xl" p={{ base: 5, md: 10 }} style = {{'paddingTop': '15em'}}>
+        <Container  id = 'serviceSection' maxW="6xl" p={{ base: 5, md: 10 }} style = {{'paddingTop': '12em'}}>
           <chakra.h3 fontSize="4xl" fontWeight="bold" mb={3} textAlign="center">
-            Features
+            Services
           </chakra.h3>
           <SimpleGrid columns={{ base: 1, md: 2 }} placeItems="center" spacing={16} mt={12} mb={4}>
             {features.map((feature, index) => (
@@ -58,7 +61,7 @@ function ServicesSection() {
           </SimpleGrid>
           <Center marginTop = {'50'}>
           <Button
-          
+          onClick={() => (navigate('/contact'))}
           colorScheme="teal"
           variant="outline"
           rounded="md"

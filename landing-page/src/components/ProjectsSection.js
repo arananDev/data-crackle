@@ -14,22 +14,23 @@ import {
 const milestones = [
   {
     id: 1,
-    date: 'MARCH 30, 2022',
-    title: 'Chakra Hackathon',
-    description: `Winner of first ever ChakraUI Hackathon. On sait depuis longtemps que travailler avec du texte lisible et contenant du sens.`
+    date: 'September, 2021',
+    title: 'Joint Research dissertation: Predicting solar flares with Machine Learning',
+    description: `Matched the Met Offices industry standard forecasting method in terms of prediction capability (measured by the ROC
+      AUC. The final ROC AUC during testing was 0.89 ). `
   },
   {
     id: 2,
-    date: 'July 30, 2021',
-    title: 'Open Source, first contribution',
-    description: `Fixing a typo, to fix a bug, contributing to Open Source and collaborating to improve technology for everyone, Ahmad's world changed again!.`
+    date: 'September, 2022',
+    title: 'RDK foods ERP system',
+    description: `Built a full web based application to tackle their issues with procurement and dynamic pricing. Helped automate a lot of their manual processes, saving them both time and money. `
   },
   {
     id: 3,
-    date: 'July 30, 2018',
-    title: 'Freelancing, started working for myself',
+    date: 'January, 2023',
+    title: 'Smart Homes Care',
     description:
-      'Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.'
+      'Built the backend service to detect data for their Smart Homes, aswell as built a simple AI to detect falling over and other high alert situations for their elderly patients'
   }
 ];
 
@@ -38,7 +39,7 @@ function ProjectsSection() {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Container maxWidth="7xl" p={{ base: 2, sm: 10 }} style = {{'paddingTop': '15em'}}>
+    <Container id = 'projectSection' maxWidth="7xl" p={{ base: 2, sm: 10 }} style = {{'paddingTop': '12em'}}>
       <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
         Projects
       </chakra.h3>

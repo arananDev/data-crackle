@@ -1,16 +1,20 @@
 import './App.css';
-import NavBar from './components/NavBar'
 import Home from './components/Home';
 import Footer from './components/Footer';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react'
+import {BrowserRouter as  Router,  Route} from 'react-router-dom'
+import { Routes} from 'react-router-dom'
+import ContactUsSection from './components/ContactUsSection';
+
 
 function App() {
   return (
     <Router>
       <ChakraProvider>
-        <NavBar />
-        <Home/>
+        <Routes>
+          <Route exact path = '/' element = {<Home/>}></Route>
+          <Route exact path = '/contact' element = {<ContactUsSection/>}></Route>
+        </Routes>
         <Footer />
       </ChakraProvider>
     </Router>

@@ -3,12 +3,14 @@ import React from 'react'
 import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 import ProjectsSection from "./ProjectsSection";
+import NavBar from "./NavBar";
 
 function Home() {
   return (
     <>
+        <NavBar />
         <HeroSection />
-        <AboutSection style = {{'marginTop': '100em'}}id = 'aboutSection'/>
+        <AboutSection />
         <ProjectsSection />
         <ServicesSection />
     
